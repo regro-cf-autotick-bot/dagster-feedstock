@@ -208,31 +208,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `create-dagster, dagit, dagster, dagster-airflow, dagster-cloud-cli, dagster-dg-cli, dagster-dg-core, dagster-graphql, dagster-pipes, dagster-rest-resources, dagster-shared, dagster-webserver` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install create-dagster dagit dagster dagster-airflow dagster-cloud-cli dagster-dg-cli dagster-dg-core dagster-graphql dagster-pipes dagster-rest-resources dagster-shared dagster-webserver
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install create-dagster dagit dagster dagster-airflow dagster-cloud-cli dagster-dg-cli dagster-dg-core dagster-graphql dagster-pipes dagster-rest-resources dagster-shared dagster-webserver
 ```
 
-It is possible to list all of the versions of `create-dagster` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add create-dagster dagit dagster dagster-airflow dagster-cloud-cli dagster-dg-cli dagster-dg-core dagster-graphql dagster-pipes dagster-rest-resources dagster-shared dagster-webserver
+# for installing globally
+pixi global install create-dagster dagit dagster dagster-airflow dagster-cloud-cli dagster-dg-cli dagster-dg-core dagster-graphql dagster-pipes dagster-rest-resources dagster-shared dagster-webserver
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `create-dagster` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search create-dagster --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search create-dagster --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search create-dagster --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -244,6 +286,8 @@ mamba repoquery whoneeds create-dagster --channel conda-forge
 # List dependencies of `create-dagster`:
 mamba repoquery depends create-dagster --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
